@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>number?</title>
+</head>
+<!-- i used an online tutorial guide to build this number guess game, in hopes thayt it would help me build my hangman game -->
+<body>
+<input type="button" value="Refresh Page" onClick="window.location.reload()">
+<script type="text/javascript">
+
+var userNumber = 10;
+var counter = 0;
+var maxTries = 5;
+
+var randomNumber = Math.floor(Math.random() *userNumber) +1;
+
+
+while (attempts != randomNumber) {
+	var attempts = prompt("pick a number from 1 to " + userNumber );
+	counter += 1;
+
+	if (counter > maxTries) {
+		document.write("You have no more tries");
+		break
+	}
+
+	if (attempts == randomNumber){
+		document.write("congrats");
+		document.write("<p> The random number was " + randomNumber + "<p>");
+		document.write("<p> It took you " + counter + " tries");
+
+		
+	}
+}
+console.log("program complete")
+
+</script>
+</body>
+</html>
